@@ -125,6 +125,10 @@
       align-items: center;
     }
 
+    .footer .container {
+      flex-direction: column;
+    }
+
 
 }
 
@@ -181,5 +185,9 @@
     
     .collections__item-title {
         font-size: 18px;
+    }
+
+    .footer__text {
+      font-size: 14px;
     }
 }

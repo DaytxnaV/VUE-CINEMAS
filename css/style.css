@@ -1,5 +1,9 @@
 @import url(./fonts.css);
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --black: #000;
   --white: #fff;
@@ -32,6 +36,16 @@ ul {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--title);
+  border-radius: 3px;
 }
 
 body {
@@ -99,6 +113,12 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: var(--white);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header__nav {
@@ -504,6 +524,10 @@ body {
   transform: translateY(200%);
 }
 
+.series {
+  padding-bottom: 63px;
+}
+
 .series:hover .title::after {
   width: 100%;
 }
@@ -608,4 +632,30 @@ body {
 
 .series__item:hover .series__icon {
   transform: scale(2) rotateX(180deg) translateY(-10px);
+}
+
+.footer {
+  padding: 24px 0;
+  background: linear-gradient(90deg, #FF8C30 0%, #9F4700 100%);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.footer__list {
+  display: flex;
+  column-gap: 50px;
+}
+
+.footer__text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: var(--white);
 }
